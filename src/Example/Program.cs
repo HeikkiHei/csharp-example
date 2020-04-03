@@ -1,12 +1,14 @@
 ﻿using System;
+using Animals;
 
-namespace Example
+namespace ConsoleApplication
 {
   public class Program
   {
     public static void Main(string[] args)
     {
-      Console.WriteLine("Hello Pietarsaari and Kokkola!");
+      Dog doggie = new Dog();
+      Console.WriteLine(doggie.TalkToOwner());
     }
   }
 }
