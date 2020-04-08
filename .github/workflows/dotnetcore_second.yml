@@ -16,8 +16,8 @@ jobs:
       with:
         dotnet-version: 3.1.102
     - name: Install dependencies HELLO WORLD
-      run: dotnet restore
+      run: dotnet restore src/Example/Example.csproj
     - name: Build HELLO WORLD
-      run: dotnet build --no-restore
+      run: dotnet build src/Example/Example.csproj --no-restore
     - name: Test HELLO WORLD
       run: dotnet test --no-restore --verbosity detailed
