@@ -20,4 +20,4 @@ jobs:
     - name: Build HELLO WORLD
       run: dotnet build src/Example/Example.csproj --no-restore
     - name: Test HELLO WORLD
-      run: dotnet test --no-restore --verbosity detailed
+      run: dotnet test test/ExampleTests/ExampleTests.csproj --no-restore --verbosity detailed
