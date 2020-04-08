@@ -1,0 +1,23 @@
+name: .NET Core
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET Core HELLO WORLD
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.102
+    - name: Install dependencies HELLO WORLD
+      run: dotnet restore
+    - name: Build HELLO WORLD
+      run: dotnet build --no-restore
+    - name: Test HELLO WORLD
+      run: dotnet test --no-restore --verbosity normal
