@@ -20,4 +20,4 @@ jobs:
     - name: Build HELLO WORLD
       run: dotnet build --no-restore
     - name: Test HELLO WORLD
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test --no-restore --verbosity detailed
